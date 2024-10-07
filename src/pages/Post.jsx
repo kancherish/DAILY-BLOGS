@@ -9,7 +9,7 @@ import parse from "html-react-parser"
 
 function Post() {
 
-  const [post, setPost] = useState([]);
+  const [post, setPost] = useState(null);
   const { slug } = useParams();
   const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ function Post() {
     if (slug) {
       backDB.getPost(slug)
         .then((post) => {
-          if (post) setPost(post);
+          if (post) setPost(post)
           else navigate('/');
         })
     } else navigate('/');
@@ -37,13 +37,12 @@ function Post() {
       })
   }
 
-
   return post ? (
     <div className='py-8'>
       <Container>
-        <div className="w-full flex justify-center mb-4 relative border rounded-xl p-2">
+        <div className="w-full h-[50vh] flex justify-center mb-4 relative border rounded-xl p-2">
           <img
-            src={appwriteService.getFilePreview(post.featuredImage)}
+            src={backDB.getFilePreview(post.featuredImage)}
             alt={post.title}
             className="rounded-xl"
           />

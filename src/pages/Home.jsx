@@ -3,13 +3,16 @@ import backDB from '../appwrite/backDB';
 import Container from '../components/container/Container';
 import PostCard from '../components/PostCard';
 import { useSelector } from 'react-redux';
+import { Query } from 'appwrite';
 
 function Home() {
     const [posts,setPosts] = useState([]);
-    const userStatus = useSelector((state)=>{state.authSlice.userStatus})
+    const userStatus = useSelector((state)=>state.authSlice.userStatus)
+    const userData = useSelector((state)=>state.authSlice.userData)
+    
 
     useEffect(() => {
-        backDB.getPosts().then((posts) => {
+        backDB.getPosts([Query.equal("userId",userData.$id)]).then((posts) => {
             if (posts) {
                 setPosts(posts.documents)
             }
@@ -18,7 +21,7 @@ function Home() {
 
  
 
-    if (posts.length === 0) {
+    if (posts.length === 0 || !(userStatus)) {
         return (
             <div className="w-full py-8 mt-4 text-center">
                 <Container>

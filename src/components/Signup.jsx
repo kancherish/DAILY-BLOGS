@@ -8,6 +8,7 @@ import Input from "./Input";
 import Button from "./Button";
 import logo from "../assets/Logo.jpg"
 
+
 function Signup() {
 
   const dispatch = useDispatch();
@@ -23,11 +24,8 @@ function Signup() {
       const account = await authService.createAccount(data)
       if (account) {
         const currentAc = await authService.getCurrentUser()
-        console.log(currentAc)
-        if (currentAc) {
           dispatch(login(currentAc))
           navigate("/")
-        }
       }
     } catch (error) {
       setError(error.message);

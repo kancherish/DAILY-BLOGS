@@ -37,9 +37,8 @@ function PostForm({post}) {
                     featuredImage : img ? img.$id : undefined,
                 }
             )
-
             if (post) {
-                navigate(`/post/${dbPost.$id}`);
+                navigate(`/post/${post.$id}`);
             }
             
         } else {
@@ -48,9 +47,8 @@ function PostForm({post}) {
             if(img)
             {
                 data.featuredImage = img.$id;
-
                 const dbPost = await backDB.createPost({...data,userId:userData.$id});
-
+                
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
                 }
@@ -112,7 +110,7 @@ function PostForm({post}) {
                 {post && (
                     <div className="w-full mb-4">
                         <img
-                            src={appwriteService.getFilePreview(post.featuredImage)}
+                            src={backDB.getFilePreview(post.featuredImage)}
                             alt={post.title}
                             className="rounded-lg"
                         />

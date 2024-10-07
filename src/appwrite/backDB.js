@@ -84,16 +84,6 @@ export class BackDB{
     
     async getPosts(queries = [Query.equal("status","active")]){
         try {
-
-            const test = await this.databases.listDocuments(
-                conf.dbId.replace("'",""),
-                conf.collectionId.replace("'",""),
-                queries
-            )
-
-            console.log(test);
-            
-
             return await this.databases.listDocuments(
                 conf.dbId.replace("'",""),
                 conf.collectionId.replace("'",""),
@@ -106,7 +96,6 @@ export class BackDB{
     }
 
     async uploadFile(file){
-        console.log(conf.bucketId.replace("'",""));
         try {
             return await this.bucket.createFile(
                 conf.bucketId.replace("'",""),
@@ -132,13 +121,12 @@ export class BackDB{
         }
     }
 
-    async getFilePreview(id){
+     getFilePreview(fileId){
         try {
-
             return this.bucket.getFilePreview(
                 
                 conf.bucketId.replace("'",""),
-                id
+                fileId
             )
         } catch (error) {
             console.log("APPWRITE:: file preview ERROR:: "+error);

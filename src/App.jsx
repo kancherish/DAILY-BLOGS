@@ -35,7 +35,7 @@ function App() {
 		<>
 			<div className="h-screen w-screen bg-[#FAF7F0] text-[#B17457] flex flex-col justify-between">
 				<Header />
-				<main className="h-[100%] flex justify-center items-center">
+				<main className="h-[100%]">
 					<div>
 						<Outlet />
 					</div>
