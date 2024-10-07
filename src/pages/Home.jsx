@@ -12,12 +12,15 @@ function Home() {
     
 
     useEffect(() => {
-        backDB.getPosts([Query.equal("userId",userData.$id)]).then((posts) => {
-            if (posts) {
-                setPosts(posts.documents)
-            }
-        })
-    }, [])
+        if (userStatus) {
+            backDB.getPosts([Query.equal("userId",userData.$id)]).then((posts) => {
+                if (posts) {
+                    setPosts(posts.documents)
+                }
+            })    
+        }
+        
+    }, [userStatus])
 
  
 
