@@ -22,7 +22,7 @@ function PostForm({post}) {
     )
 
     const navigate = useNavigate();
-    const userData = useSelector((state)=>state.authSlice.userData);
+    const userData = useSelector((state)=>state.authSlice.userData.userAccount);
 
     const submit = async (data)=>{
         if (post) {
@@ -47,7 +47,7 @@ function PostForm({post}) {
             if(img)
             {
                 data.featuredImage = img.$id;
-                const dbPost = await backDB.createPost({...data,userId:userData.$id});
+                const dbPost = await backDB.createPost({...data,userId:userData.$id,userName:userData.name});
                 
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);

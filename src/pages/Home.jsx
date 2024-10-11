@@ -9,11 +9,11 @@ function Home() {
     const [posts,setPosts] = useState([]);
     const userStatus = useSelector((state)=>state.authSlice.userStatus)
     const userData = useSelector((state)=>state.authSlice.userData)
-    
+
 
     useEffect(() => {
-        if (userStatus) {
-            backDB.getPosts([Query.equal("userId",userData.$id)]).then((posts) => {
+        if (userData) {
+            backDB.getPosts([Query.equal("userId",userData.userAccount.$id)]).then((posts) => {
                 if (posts) {
                     setPosts(posts.documents)
                 }

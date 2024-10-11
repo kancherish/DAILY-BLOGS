@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 import backDB from "../appwrite/backDB"
 import parse from "html-react-parser"
 
-
 function Post() {
 
   const [post, setPost] = useState(null);
@@ -16,6 +15,7 @@ function Post() {
   const userData = useSelector((state) => state.authSlice.userData);
 
   const isAuthor = post && userData ? post.userId === userData.$id : false;
+
 
   useEffect(() => {
     if (slug) {
@@ -37,6 +37,8 @@ function Post() {
       })
   }
 
+ 
+
   return post ? (
     <div className='py-8'>
       <Container>
@@ -46,6 +48,10 @@ function Post() {
             alt={post.title}
             className="rounded-xl"
           />
+
+          <p>
+            by {post.userName}
+          </p>
 
           {isAuthor && (
             <div className="absolute right-6 top-6">
