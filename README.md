@@ -30,6 +30,11 @@ bun run build
 
 # DAILY-BLOGS
 
+- [Project Live Link](daily-blogs-bdqw.vercel.app)
+
+
+
+
 A simple web app where one can create and manage itw own blogs and read others in most simple way
 
 ### Tech used:

@@ -1,6 +1,6 @@
 import logo from "../../assets/Logo.jpg"
 import { useSelector } from "react-redux"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Button from "../Button";
 import { logout } from "../../store/authSlice";
@@ -39,10 +39,10 @@ function Header() {
 
   return (
     <header className="bg-[#4A4947] p-2 flex justify-between items-center">
-      <div>
+      <Link to={"/"}>
         <img src={logo} alt="" className="w-20 rounded-xl"/>
         <span className="text-slate-100 ">DAILY BLOGS</span>
-      </div>
+      </Link>
       <div className="text-slate-100">
         
           {userStatus?(
