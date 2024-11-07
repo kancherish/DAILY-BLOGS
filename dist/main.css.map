@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","sources":["webpack://dailyBlogs/./src/index.css"],"sourcesContent":["@tailwind base;\n@tailwind components;\n@tailwind utilities;"],"names":[],"mappings":"AAAA,6+IAEA,o3GAFA,uP"}
