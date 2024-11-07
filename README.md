@@ -32,14 +32,24 @@ bun run build
 
 - [Project Live Link](daily-blogs-bdqw.vercel.app)
 
+### Demo Account 
 
+#### Email:
+
+```
+user@guest.com
+```
+#### Password:
+```
+user1234
+```
 
 
 A simple web app where one can create and manage itw own blogs and read others in most simple way
 
 ### Tech used:
 - #### Frontend : ReactJs, Tailwind
-- #### tools : Redux-toolkit, React-router, React-hook-form, TinyMCE
+- #### libaries : Redux-toolkit, React-router, React-hook-form, TinyMCE
 - #### Backend : [Appwrite](https://www.appwrite.io)
 - #### Bundeler :  RsPack
 - #### Platform :  BunJS
