@@ -29,7 +29,7 @@ export default defineConfig({
 				type: "css",
 			},
 			{
-				test: /\.(jpg?|png?)$/,
+				test: /\.(jpg?|png?|gif?)$/,
 				type: "asset",
 			},
 			{

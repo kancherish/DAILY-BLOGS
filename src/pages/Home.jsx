@@ -13,7 +13,7 @@ function Home() {
 
     useEffect(() => {
         if (userData) {
-            backDB.getPosts([Query.equal("userId",userData.userAccount.$id)]).then((posts) => {
+            backDB.getPosts([Query.equal("userId",userData.userAccount?.$id)]).then((posts) => {
                 if (posts) {
                     setPosts(posts.documents)
                 }
