@@ -1,56 +1,105 @@
-# Rspack Project
+# Daily Blogs 📝
 
-## Setup
+A simple yet powerful web application for creating, managing, and reading blog posts. Built with modern web technologies and focused on simplicity.
 
-Install the dependencies:
+[Live Demo](https://daily-blogs-bdqw.vercel.app) | [Report Bug](https://github.com/kancherish/daily-blogs/issues)
 
+## ✨ Features
+
+- Create and manage personal blog posts
+- Read articles from other contributors
+- Rich text editing with TinyMCE
+- User authentication and authorization
+- Responsive design (desktop-optimized)
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) (recommended) or Node.js
+- Appwrite account and project setup
+
+### Demo Account
+```
+Email: user@guest.com
+Password: user1234
+```
+
+### Installation
+
+1. Clone the repository
 ```bash
+git clone https://github.com/yourusername/daily-blogs.git
+cd daily-blogs
+```
+
+2. Install dependencies
+```bash
+# Using Bun (recommended)
 bun install
+
+# Using npm
+npm install
 ```
 
-## Get Started
+3. Environment Setup
+- Copy `.env.sample` to create `.env`
+- Configure your Appwrite credentials in `.env`:
+  ```
+  APPWRITE_ENDPOINT=your_endpoint
+  APPWRITE_PROJECT_ID=your_project_id
+  # Add other required variables
+  ```
 
-
-#### Get all your api keys and ids from your own appwrite db and create it for your own .env from .env.sample and then 
-
-
-Start the dev server:
-
+4. Start Development Server
 ```bash
+# Using Bun
 bun run dev
+
+# Using npm
+npm run dev
 ```
 
-Build the app for production:
-
+5. Build for Production
 ```bash
+# Using Bun
 bun run build
+
+# Using npm
+npm run build
 ```
 
-#### if you want you can also use nodejs and npm but you may need made some changes for .env variable usage
+## 🛠️ Tech Stack
 
-# DAILY-BLOGS
+### Frontend
+- **Framework:** React.js
+- **Styling:** Tailwind CSS
+- **State Management:** Redux Toolkit
+- **Routing:** React Router
+- **Form Handling:** React Hook Form
+- **Editor:** TinyMCE
 
-- [Project Live Link](daily-blogs-bdqw.vercel.app)
+### Backend
+- **Backend as a Service:** [Appwrite](https://www.appwrite.io)
 
-### Demo Account 
+### Build Tools
+- **Bundler:** Rspack
+- **Runtime:** Bun.js
 
-#### Email:
+## 🤝 Contributing
 
-```
-user@guest.com
-```
-#### Password:
-```
-user1234
-```
+Contributions are welcome! Here's how you can help:
 
+- Report bugs and issues
+- Suggest new features
+- Submit pull requests
+- Provide code reviews and feedback
 
-A simple web app where one can create and manage itw own blogs and read others in most simple way
+## 📝 Notes
 
-### Tech used:
-- #### Frontend : ReactJs, Tailwind
-- #### libaries : Redux-toolkit, React-router, React-hook-form, TinyMCE
-- #### Backend : [Appwrite](https://www.appwrite.io)
-- #### Bundeler :  RsPack
-- #### Platform :  BunJS
+- The application is currently optimized for desktop viewing
+- Mobile responsiveness improvements are in progress
 
+## ⚠️ Known Issues
+
+- Limited mobile device optimization
