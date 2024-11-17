@@ -4,6 +4,12 @@ A simple yet powerful web application for creating, managing, and reading blog p
 
 [Live Demo](https://daily-blogs-bdqw.vercel.app) | [Report Bug](https://github.com/kancherish/daily-blogs/issues)
 
+### Demo Account
+```
+Email: user@guest.com
+Password: user1234
+```
+
 ## ✨ Features
 
 - Create and manage personal blog posts
@@ -19,11 +25,6 @@ A simple yet powerful web application for creating, managing, and reading blog p
 - [Bun](https://bun.sh/) (recommended) or Node.js
 - Appwrite account and project setup
 
-### Demo Account
-```
-Email: user@guest.com
-Password: user1234
-```
 
 ### Installation
 
