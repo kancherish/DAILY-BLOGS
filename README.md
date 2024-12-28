@@ -30,7 +30,7 @@ Password: user1234
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/daily-blogs.git
+git clone https://github.com/kancherish/daily-blogs.git
 cd daily-blogs
 ```
 
